@@ -1,39 +1,29 @@
-const Login = () => import('@/pages/Login')
-const Layout = () => import('@/pages/common/layout/layout')
-const TableList = () => import('@/pages/part1/TableList')
-const Form = () => import('@/pages/part1/Form')
-
-export default[
+export default [
   {
     path: '/login',
     name: '登录',
-    component: Login
+    component: resolve => {
+      require(['@/pages/Login'], resolve)
+    }
   }, {
     path: '/',
-    redirect: '/',
-    name: '布局',
-    component: Layout,
+    name: 'layout',
+    component: resolve => {
+      require(['@/pages/common/layout/layout'], resolve)
+    },
     children: [
       {
-        path: '/part1',
-        name: 'part1',
-        children: [
-          {
-            path: '/part1/TableList',
-            name: '表格',
-            component: TableList
-          }, {
-            path: '/part1/Form',
-            name: '表单',
-            component: Form
-          }
-        ]
+        path: '/part1/table',
+        name: '表格',
+        component: resolve => {
+          require(['@/pages/part1/Table'], resolve)
+        }
       }, {
-        path: '/part2',
-        name: 'part2',
-        children: [
-
-        ]
+        path: '/part1/Form',
+        name: '表单',
+        component: resolve => {
+          require(['@/pages/part1/Form'], resolve)
+        }
       }
     ]
   }

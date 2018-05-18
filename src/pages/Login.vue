@@ -1,5 +1,5 @@
 <template>
-
+  <div>login</div>
 </template>
 
 <script>
@@ -8,8 +8,7 @@
     data () {
       return {}
     },
-    methods () {
-    }
+    methods: {}
   }
 </script>
 

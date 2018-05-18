@@ -1,15 +1,15 @@
 <template>
-
+  <div>form</div>
 </template>
 
 <script>
-export default {
+  export default {
     name: 'Form',
     data () {
-        return {}
+      return {}
     },
-    methods () {}
-}
+    methods: {}
+  }
 </script>
 
 <style scoped>
