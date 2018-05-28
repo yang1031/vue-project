@@ -27,4 +27,10 @@ npm run e2e
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+##############################################
+
+下载了vue-cli之后，加入了element-ui,vuex,less,搭建了一个基本的框架
+
+原先使用框架，导航栏一条条写出来而不是遍历显示让人很崩溃，修改了一下
+
+还需要完善接口，统一到一个文件中，加入mock
