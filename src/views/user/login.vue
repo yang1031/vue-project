@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-   <div class="title">登 录</div>
+   <div class="title">登 录1</div>
     <group>
       <x-input title="用户名" v-model="username"></x-input>
     </group>
